@@ -22,6 +22,10 @@ yarn add react-hook-mouse
 import React from 'react'
 import useMouse from 'react-hook-mouse'
 
+const displayCoordinates = ({x, y}) => `${x} : ${y}`
+
+const displayFlag = flag => flag ? 'Yes' : 'No'
+
 const ComponentWithMouse = () => {
   const mouse = useMouse()
 
@@ -29,27 +33,48 @@ const ComponentWithMouse = () => {
     <ul>
       <li>
         Mouse position in viewport:
-        {mouse.position.client.x} : {mouse.position.client.y}
+        {displayCoordinates(mouse.position.client)}
       </li>
       <li>
         Mouse position on page:
-        {mouse.position.page.x} : {mouse.position.page.y}
+        {displayCoordinates(mouse.position.page)}
       </li>
       <li>
         Mouse position on screen:
-        {mouse.position.screen.x}: {mouse.position.screen.y}
+        {displayCoordinates(mouse.position.screen)}
       </li>
       <li>
         Mouse movement:
-        {mouse.movement.x} : {mouse.movement.y}
+        {displayCoordinates(mouse.movement)}
       </li>
-      <li>Left button was pressed: {mouse.buttons.left}</li>
-      <li>Right button was pressed: {mouse.buttons.right}</li>
-      <li>Middle button was pressed: {mouse.buttons.middle}</li>
-      <li>Alt key was pressed: {mouse.keyboard.alt}</li>
-      <li>Ctrl key was pressed: {mouse.keyboard.ctrl}</li>
-      <li>Meta key was pressed: {mouse.keyboard.meta}</li>
-      <li>Shift key was pressed: {mouse.keyboard.shift}</li>
+      <li>
+        Left button was pressed:
+        {displayFlag(mouse.buttons.left)}
+      </li>
+      <li>
+        Right button was pressed:
+        {displayFlag(mouse.buttons.right)}
+      </li>
+      <li>
+        Middle button was pressed:
+        {displayFlag(mouse.buttons.middle)}
+      </li>
+      <li>
+        Alt key was pressed:
+        {displayFlag(mouse.keyboard.alt)}
+      </li>
+      <li>
+        Ctrl key was pressed:
+        {displayFlag(mouse.keyboard.ctrl)}
+      </li>
+      <li>
+        Meta key was pressed:
+        {displayFlag(mouse.keyboard.meta)}
+      </li>
+      <li>
+        Shift key was pressed:
+        {displayFlag(mouse.keyboard.shift)}
+      </li>
     </ul>
   )
 }
