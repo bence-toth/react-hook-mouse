@@ -82,7 +82,7 @@ const ComponentWithMouse = () => {
 
 ## Caveats
 
-Data in `mouse.keyboard` is alrways read from a `MouseEvent` and therefore it will only get updated on mouse events, not when the keys are actually pressed on the keyboard.
+Data in `mouse.keyboard` is always read from a `MouseEvent` and therefore it will only get updated on mouse events, not when the keys are actually pressed on the keyboard.
 
 ## Contributions
 
