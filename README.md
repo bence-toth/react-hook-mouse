@@ -1,4 +1,4 @@
-# react-hook-mouse
+# react-hook-mouse :mouse:
 
 A React hook to access data from mouse events.
 
