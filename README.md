@@ -1,6 +1,6 @@
 # react-hook-mouse
 
-A React hook to access data from the mouse events.
+A React hook to access data from mouse events.
 
 ## Installation
 
