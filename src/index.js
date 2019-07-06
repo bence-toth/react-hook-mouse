@@ -41,12 +41,18 @@ const useMouse = () => {
       })
     }
     events.forEach(eventType => {
-      document.addEventListener(eventType, handleMouseEvent)
+      document.addEventListener(
+        eventType,
+        handleMouseEvent
+      )
     })
     return () => {
       events.forEach(eventType => {
-        document.removeEventListener(eventType, handleMouseEvent)
-      })  
+        document.removeEventListener(
+          eventType,
+          handleMouseEvent
+        )
+      })
     }
   }, [])
   return mouse
